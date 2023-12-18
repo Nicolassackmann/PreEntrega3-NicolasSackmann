@@ -1,129 +1,105 @@
-alert("Bienvenido, Para comprar entradas para el Gran Premio de Buenos Aires de la Formula 1 debes ingresar tus datos")
+alert(
+  `Inicialización de la aplicación\n============================================================`
+);
 
-let nombre
-let apellido
-let edad
+// Definición de productos
+const productos = [
+  { nombre: "Hamburguesa Simple", precio: 300 },
+  { nombre: "Doble Nic", precio: 500 },
+  { nombre: "Super Nic", precio: 600 },
+  { nombre: "Mega Pumper", precio: 700 },
+  { nombre: "Tapa Arterias", precio: 650 },
+  { nombre: "Paro Cardiaco", precio: 650 },
+  { nombre: "Papas Fritas Grandes", precio: 250 },
+  { nombre: "Papas Fritas Medianas", precio: 200 },
+  { nombre: "Papas Fritas Pequeñas", precio: 150 },
+  { nombre: "Bebida sabor Cola", precio: 100 },
+  { nombre: "Bebida sabor Lima", precio: 100 },
+  { nombre: "Bebida sabor naranja", precio: 100 },
+];
 
-nombre= prompt("¿Cuál es tu nombre?");
-
-while (nombre == "") {
-    nombre = prompt("Ingresa tu nombre para continuar")
+// Función para mostrar el menú
+function mostrarMenu() {
+  alert("Menú:");
+  alert("============================================================");
 }
 
-apellido= prompt("¿Cuál es tu apellido?");
+// Función para tomar la orden del cliente
+function tomarOrden() {
+  const orden = [];
+  let continuar = true;
 
-while (apellido == "") {
-    apellido = prompt ("Ingresa tu apellido para continuar")
-}
+  while (continuar) {
+    const opcion = parseInt(
+      prompt(`Ingrese el número del producto que desea agregar:
+      1-  Hamburguesa Simple, precio: 300 
+      2-  Doble Nic, precio: 500 
+      3-  Super Nic, precio: 600 
+      4-  Mega Pumper, precio: 700 
+      5-  Tapa Arterias, precio: 650 
+      6-  Paro Cardiaco, precio: 650 
+      7-  Papas Fritas Grandes, precio: 250 
+      8-  Papas Fritas Medianas, precio: 200 
+      9-  Papas Fritas Pequeñas, precio: 150 
+      10- Bebida sabor Cola, precio: 100 
+      11- Bebida sabor Lima, precio: 100 
+      12- Bebida sabor naranja, precio: 100 
+      0-  Para Finalizar la compra`)
+    );
 
-edad= prompt("¿Cuántos años tenes?");
-
-while (edad <= 10) {
-    edad = prompt("La edad minima necesaria para ingresar es 10");
-}
-
-console.log(`Bienvenido ${nombre} ${apellido}`);
-
-console.log(`Tu edad es ${edad} años`);
-
-alert("Bienvenido, Ya puedes seleccionar y comprar tus entradas para la Formula 1")
-
-
-
-let entradas
-let precio
-let equipoPits
-let promocion
-
-entradas = parseInt(prompt("¿Qué tipo de entrada quieres?: \n1. Butaca General \n2. Butaca Preferencial \n3. Butaca Vip \n4. Entrada AllInclusive"))
-
-while (isNaN(entradas) || entradas < 1 || entradas > 4) {
-    entradas = parseInt(prompt("Porfavor seleccione un tipo de entrada: \n1. Butaca General \n2. Butaca Preferencial \n3. Butaca Vip \n4. Entrada AllInclusive"))
-}
-
-function alertaEntradas(entradas) {
-    alert(`La entrada seleccionada es  seleccionada es ${entradas}`)
-}
-
-switch (entradas) {
-    case 1:
-        entradas = "Butaca General";
-        alertaEntradas(entradas);
-        break;
-    case 2:
-        entradas = "Butaca Preferencial";
-        alertaEntradas(entradas);
-        break;
-    case 3:
-        entradas = "Butaca Vip";
-        alertaEntradas(entradas);
-        break;
-    case 4: 
-        entradas = "Entrada AllInclusive"
-        alertaEntradas(entradas)
-        break;
-}
-
-const alertaEquipo = (entradas,) => {
-    alert(`Tu entrada es: ${entradas}`);
-}
-
-if (entradas === "Butaca General") {
-   alert("El valor de tu entrada general es de U$360")
-}
-
-if (entradas === "Butaca Preferencial") {
-    alert("El valor de tu Entrada Preferencial es de U$600")
-}
-
-if (entradas === "Butaca Vip") {
-    alert("El valor de tu Entrada Vip es de U$1000")
-}
-
-if (entradas === "Entrada AllInclusive") {
-    alert("Con tu Entrada AllInclusive tenes la posibilidad de visitar los pits de tu equipo favorito")
-    equipoPits = parseInt(prompt(`Porfavor selecciona tu equipo Favorito: \n1. Red Bull \n2. Aston Martin \n3. Mercedes \n4. Ferrari \n5. Williams \n6. Alfa Romeo \n7. AlphaTauri \n8. Hass \n9. Alpine \n10. McLaren`))
-
-    while (isNaN(equipoPits) || equipoPits < 1 || equipoPits > 10) {
-        equipoPits = parseInt(prompt(`Porfavor selecciona tu equipo Favorito: \n1. Red Bull \n2. Aston Martin \n3. Mercedes \n4. Ferrari \n5. Williams \n6. Alfa Romeo \n7. AlphaTauri \n8. Hass \n9. Alpine \n10. McLaren`))
+    if (opcion === 0) {
+      continuar = false;
+    } else if (opcion >= 1 && opcion <= productos.length) {
+      orden.push(productos[opcion - 1]);
+      alert(`${productos[opcion - 1].nombre} agregado al carrito.`);
+    } else {
+      alert("Opción no válida. Por favor, ingrese un número válido.");
     }
+  }
 
-    switch (equipoPits) {
-        case 1:
-            equipoPits = "Red Bull";
-            break;
-        case 2:
-            equipoPits = "Aston Martin";
-            break;
-        case 3:
-            equipoPits = "Mercedes";
-            break;
-        case 4:
-            equipoPits = "Ferrari";
-            break;
-        case 5:
-            equipoPits = "Williams";
-            break;
-        case 6:
-            equipoPits = "Alfa Romeo";
-            break;
-        case 7:
-            equipoPits = "AlphaTauri";
-            break;
-        case 8:
-            equipoPits = "Hass";
-            break;
-        case 9:
-            equipoPits = "Alpine";
-            break;
-        case 10:
-            equipoPits = "McLaren";
-            break;
-
-    }
-    console.log(`Tu entrada es: ${entradas} \nY podras estar en los pits del equipo: ${equipoPits} `)
+  return orden;
 }
 
+// Función para calcular el total de la compra
+function calcularTotal(orden) {
+  let total = 0;
+  orden.forEach((producto) => {
+    total += producto.precio;
+  });
+  return total;
+}
 
+// Función para que el usuario elija el método de pago
+function elegirMetodoPago() {
+  const metodosDePago = ["Efectivo", "MercadoPago", "Crédito", "Débito"];
+  const opcion = parseInt(
+    prompt(
+      `Seleccione el método de pago:
+      1. Efectivo
+      2. MercadoPago
+      3. Crédito
+      4. Débito`
+    )
+  );
 
+  if (opcion >= 1 && opcion <= metodosDePago.length) {
+    return metodosDePago[opcion - 1];
+  } else {
+    alert("Opción no válida. Seleccionando Efectivo por defecto.");
+    return "Efectivo";
+  }
+}
 
+// Lógica principal
+mostrarMenu();
+const ordenCliente = tomarOrden();
+const totalCompra = calcularTotal(ordenCliente);
+
+alert("Resumen de la orden:");
+ordenCliente.forEach((producto) => {
+  alert(`${producto.nombre} - $${producto.precio}`);
+});
+alert(`Total de la compra: $${totalCompra}`);
+
+const metodoPago = elegirMetodoPago();
+alert(`Gracias por tu compra, ${cliente.nombre}.\nDirección de entrega: ${cliente.direccion}.\nMétodo de pago seleccionado: ${metodoPago}`);

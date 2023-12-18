@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #8a8a97;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+  }
+
+.CajaContenedora {
+  background-color: #58588a96;
+  border-radius: 15px;
+}
