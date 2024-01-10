@@ -1,3 +1,8 @@
+import {app} from "./src/app"
+
+app();
+
+
 alert(
   `Inicialización de la aplicación\n============================================================`
 );
