@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <title>MATEROS</title>
+  <link rel="shortcut icon" href="../image/ico.ico">
+</head>
+
+    <body class="">
+        
+          <section class="carrito float-end mt-3">
+            <div id="botonCarritoNotificacion">
+            </div>
+            <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" id="botonCarrito" class="btn btn-transparent">
+              <img class="logoCarrito rounded-3" src="../image/carrito.png">
+            </button>
+          </section>
+          
+        <header class="header">
+            <nav class="navbar navbar-expand-md " aria-label="Fourth navbar example">
+                <div class="container-fluid">
+                <a  class="navbar-brand" href="../index.html"><img class="logo rounded-4" src="../image/logo.png" alt="Logo"></a>
+                <p class="pagina">MATEROS</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav nav-underline ms-auto mb-2 mb-md-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./productos.html">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Error404.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Error404.html">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Error404.html">Perfil</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="offcanvas offcanvas-start rounded" data-bs-scroll="true" style="width: fit-content;" data-bs-backdrop="true" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header text-center fontTitulo">
+                <h3 class="offcanvas-title" id="offcanvasScrollingLabel">Tu Carrito</h3>
+                <img class="carroSeccion " src="../image/carrito.png">
+              
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div id="canvasBody" class="offcanvas-body">
+              <div class="card" id="carritoPadre" style="width: 22rem;">
+                <ul id="carritoContainer" class="list-group list-group-flush">
+                </ul>
+                <a href="https://www.mercadopago.com.ar/home" target="_blank" class="fontTitulo badge border shadow rounded text-decoration-none fs-4" id="totalCarrito">Pagar con MercadoPago</a>
+              </div>
+            </div>
+          </div>
+        <main>
+            <div class="container-fluid seccionTienda">
+                <h1 class="tituloTienda tracking-in-contract-bck fontTitulo text-center fs-1">Tienda</h1>
+                <div>
+                    <nav class="navbar navbar-expand-md navbar-dark gudeaNav fs-6">
+                        <div class="container-fluid">
+                            <form class="d-flex " role="search">
+                                <input class="fondosdivs  text-light-emphasis form-control me-2 border-warning-subtle  fs-4" id="buscar"
+                                 type="search" placeholder="Buscar Productos" aria-label="Search">
+                            </form>
+                        </div>
+                        <select class="fondosdivs w-25 form-select me-2 border-warning-subtle fs-4" id="filtros"
+                            aria-label="Filtros">
+                        <option selected>Filtros</option>
+                        <option value="Todo">Todo</option>
+                        <option value="Mates">Mates</option>
+                        <option value="Bombillas">Bombillas</option>
+                        <option value="Termos">Termos</option>
+                        <option value="Yerbas">Yerbas</option>
+                        </select>
+                    </nav>
+                </div>
+                <div>
+                    <div class="row justify-content-evenly text-justify" id="productos" data-aos="slide-left">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init();
+        </script>
+        <script type="module" src="../JS/app.js"></script>
+    </body>
+</html>

@@ -4,14 +4,58 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Pumper Nic</title>
+    <link rel="shortcut icon" href="../image/ico.ico">
+    <title>Tienda de Mates</title>
   </head>
-  <body background="./image/pumper.jpg">
-    <div class="CajaContenedora">
-      <h1>PreEntrega2</h1>
-      <h2>Realiza tu pedido en Pumper Nic</h2>
-    </div>
-    <script type="module" src="./JS/index.js"></script>
-</html>
+  <body background="./image/Fondo.jpg">
+    <Header>
+    <nav class="navbar navbar-expand-md " aria-label="Fourth navbar example">
+      <div class="container-fluid">
+        <a  class="navbar-brand" href="../index.html"><img class="logo rounded-4" src="../image/logo.png" alt="Logo"></a>
+        <p class="pagina">MATEROS</p>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav nav-underline ms-auto mb-2 mb-md-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Pages/productos.html">Tienda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Pages/Error404.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./Pages/Error404.html">Perfil</a>
+              </li>
+            </ul>
+        </div>
+    </nav>
+  </Header>
+  <main class="main">
+    <section class="container"> 
+      <div class="row mt-5 d-inline-block">
+        <div class="fondosdivs rounded-3 col-6">  
+          <h1>Bienvenido a Materos</h1>
+          <h2>Tu tienda de Mates de alta calidad</h2>
+        </div>
+        <div class="fondosdivs rounded-3 col-6">
+          <h3>EL MATE </h3>
+          <p> Con el mate me levanto Con el mate me despierto, Confidente de mi vida Y de todo lo que siento.  El me acompaña a escribir Entre versos y poesías, Pues mi patria es tierra gaucha Y les hablo de Argentina.  El mate es compañero En el vivir de cada día , Para tantos el consuelo Del sufrir en esta vida .  A veces se toma amargo Y otras veces dulzón, Dependerá de los gustos O de cuestiones de amor.  Para el pobre en esta tierra Pasó a ser necesidad, Por la miseria en que vive Y así su hambre calmar.  Cuando me embriago de nostalgia El me ayuda a recordar, A esa que quise tanto Y no la puedo olvidar.</p>
+          <h5>ROBERTO APAZA</h5>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+  AOS.init();
+  </script>
+  </body>
+  </html>
+  

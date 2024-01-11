@@ -1,20 +1,34 @@
 body {
     margin: 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
-    background-color: #8a8a97;
     background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center;
-  }
+   
+    background-size: cover;
+    
+}
+header{
+  background-color: rgba(107, 49, 16, 0.849);
+}
 
-.CajaContenedora {
-  background-color: #58588a96;
-  border-radius: 15px;
+.fondosdivs {
+    background-color: rgba(194, 197, 202, 0.815);
+    
+}
+
+.logo {
+  width: 60px
+}
+
+.carrito:hover {
+    background-color: rgba(240, 248, 255, 0.548);
+    border-radius: 30%;
+    transition-duration: 2s;
+}
+
+.carrito img {
+  width: 40px; 
+  height: 40px;
+}
+
+.carroSeccion {
+  width: 50px;
 }
